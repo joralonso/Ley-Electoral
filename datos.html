@@ -1,0 +1,168 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/estilo.css" />
+      <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+      <script src="js/vendor/modernizr.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="http://code.highcharts.com/highcharts.js"></script>
+      <script src="http://code.highcharts.com/modules/exporting.js"></script>
+      
+      <script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 0,
+            plotShadow: false,
+            events: {
+                load: function() {
+                    this.renderer.text('texto', 80, 40, 173, 57)
+                        .add();
+                }
+            }
+        },
+        title: {
+            text: 'Browser<br>shares',
+            align: 'center',
+            verticalAlign: 'middle',
+            y: 50
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                dataLabels: {
+                    enabled: true,
+                    distance: -50,
+                    style: {
+                        fontWeight: 'bold',
+                        color: 'white',
+                        textShadow: '0px 1px 2px black'
+                    }
+                },
+                startAngle: -90,
+                endAngle: 90,
+                center: ['50%', '75%']
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
+            innerSize: '50%',
+            data: [
+                ['Firefox',   45.0],
+                ['IE',       26.8],
+                ['Chrome', 12.8],
+                ['Safari',    8.5],
+                ['Opera',     6.2],
+                {
+                    name: 'Others',
+                    y: 0.7,
+                    dataLabels: {
+                        enabled: false
+                    }
+                }
+            ]
+        }],
+        exporting: {
+            enableImages: true
+        }
+    })
+    
+})
+          
+
+          
+      </script>
+  </head>
+  <body>
+      
+    <header>
+        <div class="row" style="margin-top:5px">
+            <div class="medium-3 columns">
+            <div class="medium-3 columns">
+                  <img style="width:100%" src="img/logo.png">
+            </div>
+            <div class="medium-9 columns">
+                <div class="icon-bar six-up" style="background-color:#fff">
+                  <a class="item">
+                    Home
+                  </a>
+                  <a class="item">
+                    Home
+                  </a>
+                  <a class="item">
+                    Home
+                  </a>
+                  <a class="item">
+                    Home
+                  </a>
+                  <a class="item">
+                    Home
+                  </a>
+                  <a class="item">
+                    Home
+                  </a>
+                </div>
+            </div>
+        </div>
+    </header>  
+      
+    <div class="row">
+      <div class="medium-12 columns">
+        <h1 style="font-family:Roboto; text-align:center; margin:10px;">Resultados Electorales</h1>
+      </div>
+    </div>
+      
+    <div class="row">
+        <div class="medium-2 columns">
+            &nbsp;
+        </div>
+        <div class="medium-8 columns">
+            <div id="container" style="with=100%"></div>
+            
+          <table style="width: 100%">
+              <thead>
+                  <tr>
+                        <th style="width:50%">Partido</th>
+                        <th style="width:25%; text-align:right;">Votos</th>
+                        <th style="width:15%; text-align:right;">Porcentaje</th>
+                        <th style="width:10%; text-align:right;">Escaños</th>
+                  </tr>
+              </thead>
+              
+              <tbody>
+                    <tr>
+                        <td>PP</td>
+                        <td style="text-align:right">10.123.456</td>
+                        <td style="text-align:right">10.3%</td>
+                        <td style="text-align:right">3</td>
+                    </tr>
+              </tbody>
+          </table>
+      </div>
+        <div class="medium-2 columns">
+           &nbsp; 
+        </div>
+    </div>
+    
+      
+    <footer>
+        <hr>
+        <h5 style="text-align:center;">Jorge Alonso Merchán - IPO USAL 2015</h5>
+    </footer>
+    
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
